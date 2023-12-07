@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <style>
+      h2 {
+        width: 11em;
+        animation: typingWords 5s steps(11) forwards, cursor 5s steps(1) 4s forwards;
+        white-space: nowrap;
+        overflow: hidden;
+        height: 0px;
+        border-right: .1em solid #000;
+      }
+
+      @keyframes typingWords {
+        0% {
+          width: 0;
+        }
+      }
+
+      @keyframes cursor {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <link rel="stylesheet" href="../css/other.css" />
+    <title>question</title>
+    <script>
+      function validateInput() {
+        var input = document.getElementById('userInput').value;
+        var input1 = document.getElementById('OK').value;
+        if (input === '100') {
+          alert('谢谢老师，谢谢老师，谢谢老师');
+          return true;
+        } else if(input < '80'){
+          alert('老师，菜菜，捞捞');
+          return false;
+        } else if(input < '90'){
+          alert('能再高一点点吗');
+          return false;
+        } else if(input < '100'){
+          alert('谢谢老师，够多了够多了');
+          return true;
+        }else if(input > '100'){
+          alert('谢谢老师，too much!');
+          return true;
+        }else {
+            alert('输入点正常的东西啊喂');
+            return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="game.html" class="login-form" onsubmit="return validateInput()">
+        <h2>这是一个小小的问题</h2>
+        <input
+          type="text"
+          id="userInput"
+          name="username"
+          placeholder="老师，你新生实践课，会给我多少分？"
+        />
+        <input
+        type="text"
+        id="OK"
+        name="username"
+        placeholder="老师你觉得我的网页做的好不好？"
+      />
+        <button type="submit">确定</button>
+      </form>
+    </div>
+  </body>
+</html>
