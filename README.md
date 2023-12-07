@@ -1,3 +1,3 @@
 # czj060
 网页作业
-别readme了快去帮我改改代码
+We only live so long,we just skip readme.
